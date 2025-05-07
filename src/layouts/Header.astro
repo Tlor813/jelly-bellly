@@ -1,0 +1,14 @@
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+
+// Import Stylesheet
+import '../styles/global.css';
+
+
+// data source
+// replace temporary JSON placeholder API
+const source = 'https://assets.codepen.io/16425/jelly-belly-beans.json';
+// fetch the data
+const res = await fetch(source); 
+// store retreived data
+const jellyBeans = await res.json();

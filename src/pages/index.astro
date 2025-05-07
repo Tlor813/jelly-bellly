@@ -1,6 +1,12 @@
 ---
+// Layouts
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../layouts/Header.Header.astro'
+
+
 // Import Stylesheet
 import '../styles/global.css';
+
 
 // data source
 // replace temporary JSON placeholder API
@@ -10,20 +16,8 @@ const res = await fetch(source);
 // store retreived data
 const jellyBeans = await res.json();
 ---
+<BaseLayout>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-
-		<!-- Normalize CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
-		<title>Retreive and and display external API data with Astro</title>
-	</head>
-	<body>
 		
 		<header class="masthead">
 			<h1 class="site-title">Jelly Belly</h1>
@@ -54,5 +48,4 @@ const jellyBeans = await res.json();
 		  
 
 
-	</body>
-</html>
+		</BaseLayout>
