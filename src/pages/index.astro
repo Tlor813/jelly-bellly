@@ -36,13 +36,14 @@ const jellyBeans = await res.json();
 				<!-- Your API Data -->
 				{
 					jellyBeans.map( bean =>
-					<li>
+					<li style= {`background: ${bean.backgroundColor}` }>
 
 						<h3>{bean.flavorName}</h3>
 						
 						<img src= {bean.imageUrl}/>
 
 						<p>{bean.description} </p>
+
 
 					</li> 
 					)
